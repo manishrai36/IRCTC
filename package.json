@@ -1,0 +1,18 @@
+{
+  "name": "irctcautomation",
+  "version": "1.0.0",
+  "description": "ticket booking automation using cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "file": " npm run test -- --spec cypress//integration//HomePage//irctcPage.js --headed -b chrome",
+    "file1": "Cypress run --browser chrome --headed --spec cypress//integration//HomePage//irctcPage.js"
+  },
+  "author": "Manish Kumar",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "cypress": "^13.7.3",
+    "mocha": "^10.4.0"
+  }
+}
