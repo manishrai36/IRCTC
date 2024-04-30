@@ -23,7 +23,7 @@ describe("IRCTC WebPage Automation",()=>
                 cy.wrap($ele).click();
             }
         })
-       cy.wait(7000);
+       cy.wait(3000);
     })
 
     before("To",()=>
@@ -36,7 +36,7 @@ describe("IRCTC WebPage Automation",()=>
                 cy.wrap($ele).click();
             }
         })
-        cy.wait(7000);
+        cy.wait(3000);
     })
 
     it("Date",()=>
@@ -51,5 +51,16 @@ describe("IRCTC WebPage Automation",()=>
        //cy.get("#dateSpecific").should('be.visible').click({force:true});
        Cypress.$("#dateSpecific").trigger('click');
        cy.get('.col-md-3 > .search_btn').click();
+       cy.wait(2000);
+       cy.get(':nth-child(1) > .bull-back > app-train-avl-enq > :nth-child(1) > :nth-child(5) > .white-back > table > tr > :nth-child(1) > .pre-avl > .col-xs-12').click();
+       cy.get(':nth-child(5) > .pre-avl > .AVAILABLE').click();
+       cy.get(':nth-child(1) > .bull-back > app-train-avl-enq > [style="padding-top: 10px; padding-bottom: 20px;"] > [style="overflow-x: auto;"] > .pull-left > :nth-child(1) > .btnDefault').click();
+       cy.get('.ui-confirmdialog-acceptbutton > .ui-button-text').click();
+
+       //click on particular date
+    //    cy.get('div[class="ng-star-inserted"]>table>tr:nth-child(1)>td').each(($row,index,$list)=>
+    //    {
+    //         if()
+    //    })
     })
 })
