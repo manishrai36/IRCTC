@@ -16,8 +16,11 @@
     "cypress-cucumber-preprocessor": "^4.3.1",
     "mocha": "^10.4.0"
   },
-  "cypress-cucumber-preprocessor":{
-    "nonGlobalStepDefinitions":true,
-    "step_definitions":"cypress/integration/featurefile/irctc"
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "step_definitions": "cypress/integration/featurefile/irctc"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.11"
   }
 }
