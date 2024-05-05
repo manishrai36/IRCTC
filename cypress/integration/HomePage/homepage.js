@@ -1,4 +1,19 @@
+/// <reference types="cypress"/>
+///<reference types="cypress-iframe"/>
+import 'cypress-iframe'
 class HomePage{
+
+    login()
+    {
+         cy.get('.h_menu_drop_button.hidden-xs > a > .fa').click();
+        cy.get('.ng-star-inserted > .search_btn').click();
+       
+         cy.get('div[class="form-group form-sd ui-inputgroup"]:nth-child(1) input').type("Enter Your UserID");
+         cy.get('div[class="form-group form-sd ui-inputgroup"]:nth-child(2) input').type("Enter Your Password");
+         cy.wait(20000);
+         cy.get('form[class="ng-valid ng-dirty ng-touched"] >span button').click();
+
+    }
 
      setFrom(from) {
         cy.get('span[class="ng-tns-c57-8 ui-autocomplete ui-widget"]>input').type(from);
@@ -21,6 +36,11 @@ class HomePage{
                 cy.wrap($ele).click();
             }
         })
+    }
+
+    setDate(date)
+    {
+        cy.get('.ui-calendar > .ui-inputtext').clear().type(date);
     }
     
 }
